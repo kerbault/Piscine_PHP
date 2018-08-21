@@ -2,6 +2,7 @@ body {
 	font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
 	margin: 0px;
 	padding: 0px;
+	background-color: #eee;
 }
 
 nav {
@@ -27,11 +28,11 @@ nav>ul>li {
 
 nav>ul>li>p {
 	padding: 20px 30px;
-	color: #FFF;
+	color: #eee;
 }
 
 nav>ul>li:hover p {
-	padding: 15px 30px 20px 30px;
+	padding: 15px 30px 20px;
 }
 
 nav li {
@@ -57,7 +58,7 @@ nav li:hover .submenu {
 }
 
 .submenu li {
-	border-bottom: 1px solid #CCC;
+	border-bottom: 3px solid #eee;
 }
 
 .submenu li p {
@@ -67,38 +68,38 @@ nav li:hover .submenu {
 	width: 270px;
 }
 
-.test1:hover {
-	border-top: 5px solid #e44d26;
-	background-color: rgba(228, 77, 38, 0.15);
+.burger:hover {
+	border-top: 5px solid rgb(65, 165, 231);
+	background-color: rgba(65, 165, 231, 0.15);
 }
 
-.test2:hover {
-	border-top: 5px solid #e44d26;
-	background-color: rgba(228, 77, 38, 0.15);
+.Bagel:hover {
+	border-top: 5px solid rgb(230, 100, 40);
+	background-color: rgba(230, 100, 40, 0.15);
 }
 
-.test3:hover {
-	border-top: 5px solid #e44d26;
-	background-color: rgba(228, 77, 38, 0.15);
+.Sandwich:hover {
+	border-top: 5px solid rgb(193, 240, 65);
+	background-color: rgba(193, 240, 65, 0.15);
 }
 
-.test1 .submenu {
+.burger .submenu {
+	background-color: #26a8e4;
+}
+
+.Bagel .submenu {
 	background-color: rgb(230, 100, 40);
 }
 
-.test2 .submenu {
-	background-color: rgb(230, 100, 40);
+.Sandwich .submenu {
+	background-color: #9be426;
 }
 
-.test3 .submenu {
-	background-color: rgb(230, 100, 40);
-}
-
-.submenu li:hover p{
+.submenu li:hover p {
 	color: #eee;
 	font-weight: bold;
 }
 
-.test1 .submenu li:hover{
+.submenu li:hover {
 	background-color: rgb(210, 77, 60)
 }
