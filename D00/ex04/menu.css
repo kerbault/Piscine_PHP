@@ -1,0 +1,104 @@
+body {
+	font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+	margin: 0px;
+	padding: 0px;
+}
+
+nav {
+	width: 100%;
+	background-color: #424558;
+}
+
+nav>ul {
+	margin: 0px;
+	padding: 0PX;
+}
+
+nav>ul::after {
+	content: "";
+	display: block;
+	clear: both;
+}
+
+nav>ul>li {
+	float: left;
+	position: relative;
+}
+
+nav>ul>li>p {
+	padding: 20px 30px;
+	color: #FFF;
+}
+
+nav>ul>li:hover p {
+	padding: 15px 30px 20px 30px;
+}
+
+nav li {
+	list-style-type: none;
+}
+
+.submenu {
+	display: none;
+}
+
+nav p {
+	display: inline-block;
+	text-decoration: none;
+}
+
+nav li:hover .submenu {
+	display: inline-block;
+	position: absolute;
+	top: 100%;
+	left: 0px;
+	padding: 0px;
+	z-index: 1000;
+}
+
+.submenu li {
+	border-bottom: 1px solid #CCC;
+}
+
+.submenu li p {
+	padding: 13px 30px;
+	font-size: 13px;
+	color: #222538;
+	width: 270px;
+}
+
+.test1:hover {
+	border-top: 5px solid #e44d26;
+	background-color: rgba(228, 77, 38, 0.15);
+}
+
+.test2:hover {
+	border-top: 5px solid #e44d26;
+	background-color: rgba(228, 77, 38, 0.15);
+}
+
+.test3:hover {
+	border-top: 5px solid #e44d26;
+	background-color: rgba(228, 77, 38, 0.15);
+}
+
+.test1 .submenu {
+	background-color: rgb(230, 100, 40);
+}
+
+.test2 .submenu {
+	background-color: rgb(230, 100, 40);
+}
+
+.test3 .submenu {
+	background-color: rgb(230, 100, 40);
+}
+
+.submenu li:hover p{
+	color: #eee;
+	font-weight: bold;
+}
+
+.test1 .submenu li:hover{
+	background-color: rgb(210, 77, 60)
+}

@@ -1,0 +1,99 @@
+h1 {
+	text-align: center;
+	color: rgb(75, 75, 75);
+	font-family: Bradley Hand, cursive;
+	font-size: 4.4vw;
+}
+
+td {
+	width: 5vw;
+	height: 5.5vw;
+	line-height: 0.08vw;
+	font-family: Tahoma, Geneva, Verdana, sans-serif;
+	padding-top: 0vw;
+	padding-bottom: 0vw;
+	border: 1px solid rgb(250, 250, 250);
+}
+
+table#t01 td {
+	width: 10;
+	height: 3;
+	text-align: center;
+}
+
+.weight {
+	text-align: right;
+	font-size: 0.75vw;
+	color: rgb(250, 250, 250);
+	padding-right: 0.2vw;
+}
+
+.numb {
+	text-align: left;
+	font-size: 1vw;
+	color: rgb(250, 250, 250);
+	padding-left: 0.5vw;
+}
+
+.Name {
+	text-align: center;
+	font-size: 2vw;
+	font-weight: bold;
+	color: rgb(250, 250, 250);
+}
+
+.other {
+	text-align: center;
+	font-size: 1.2vw;
+	color: rgb(250, 250, 250);
+}
+
+.alc {
+	background-color: rgb(250, 181, 22);
+}
+
+.alcter {
+	background-color: rgb(250, 72, 41);
+}
+
+.lanthanide {
+	background-color: rgb(250, 123, 35);
+}
+
+.actinide {
+	background-color: rgb(196, 62, 201);
+}
+
+.met_trans {
+	background-color: rgb(127, 72, 190);
+}
+
+.met_pauv {
+	background-color: rgb(64, 112, 0);
+}
+
+.metalloid {
+	background-color: rgb(115, 177, 0);
+}
+
+.no_meta {
+	background-color: rgb(121, 121, 121);
+}
+
+.gaz_noble {
+	background-color: rgb(48, 120, 214);
+}
+
+.halogene {
+	background-color: rgb(87, 177, 238);
+}
+
+.no_class {
+	background-color: rgb(75, 75, 75);
+}
+
+.empty {
+	border: 0px solid rgb(75, 75, 75);
+	height: 4vw;
+	width: 0px;
+}
