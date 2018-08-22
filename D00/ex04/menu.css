@@ -21,8 +21,18 @@ nav>ul::after {
 	clear: both;
 }
 
+nav>ul>li>ul::after {
+	content: "";
+	display: block;
+	clear: both;
+}
+
 nav>ul>li {
 	float: left;
+	position: relative;
+}
+
+nav>ul>li>ul>li {
 	position: relative;
 }
 
@@ -43,18 +53,31 @@ nav li {
 	display: none;
 }
 
+.submenu2 {
+	display: none;
+}
+
 nav p {
 	display: inline-block;
 	text-decoration: none;
 }
 
-nav li:hover .submenu {
+nav>ul>li:hover .submenu {
 	display: inline-block;
 	position: absolute;
 	top: 100%;
 	left: 0px;
 	padding: 0px;
 	z-index: 1000;
+}
+
+nav>ul>li>ul>li:hover .submenu2 {
+	display: inline-block;
+	position: absolute;
+	top: 0px;
+	left: 210px;
+	padding: 0px;
+	border-left: 3px rgb(221, 29, 29);
 }
 
 .submenu li {
@@ -65,7 +88,7 @@ nav li:hover .submenu {
 	padding: 13px 30px;
 	font-size: 13px;
 	color: #222538;
-	width: 270px;
+	width: 150px;
 }
 
 .burger:hover {
@@ -87,12 +110,24 @@ nav li:hover .submenu {
 	background-color: #26a8e4;
 }
 
+.burger .submenu .submenu2 {
+	background-color: #66c2ec;
+}
+
 .Bagel .submenu {
 	background-color: rgb(230, 100, 40);
 }
 
+.Bagel .submenu .submenu2 {
+	background-color: rgb(235, 138, 94);
+}
+
 .Sandwich .submenu {
 	background-color: #9be426;
+}
+
+.Sandwich .submenu .submenu2 {
+	background-color: #85b439;
 }
 
 .submenu li:hover p {
