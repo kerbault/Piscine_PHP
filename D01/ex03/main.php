@@ -3,5 +3,5 @@
 
 include "ft_split.php";
 
-print_r(ft_split(trim("           Hello     \t     World AAA")));
+print_r(ft_split(trim("           Hello          World AAA")));
 ?>
