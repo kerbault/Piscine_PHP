@@ -11,8 +11,8 @@ if ($argc > 0) {
     $tmp = $tab[$i - 1];
     $tab[$i - 1] = $tab[0];
     $tab[0] = $tmp;
-	$j = 0;
-	$bol = 0;
+    $j = 0;
+    $bol = 0;
     while ($i-- > 0) {
         if ($bol == 1) {
             echo " ";

@@ -13,8 +13,8 @@ sort($tab);
 $i = count($tab);
 $j = 0;
 while ($i-- > 0) {
-	echo $tab[$j++];
-	echo "\n";
+    echo $tab[$j++];
+    echo "\n";
 }
 return (0);
 ?>

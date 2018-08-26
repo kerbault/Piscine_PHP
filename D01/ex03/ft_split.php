@@ -15,3 +15,6 @@ function ft_split($str)
     sort($array);
     return ($array);
 }
+
+// Main to delete
+// print_r(ft_split(trim("           Hello          World AAA")));
