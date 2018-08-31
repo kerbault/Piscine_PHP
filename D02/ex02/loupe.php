@@ -1,10 +1,9 @@
 #!/usr/bin/php
 <?php
 
-function    replace($tab)
+function replace($tab)
 {
-    $tab[0] = preg_replace("#$tab[1]#", strtoupper($tab[1]),$tab[0]);
-    // print_r ($tab);
+    $tab[0] = preg_replace("#$tab[1]#", strtoupper($tab[1]), $tab[0]);
     return ($tab[0]);
 }
 
