@@ -1,4 +1,4 @@
-p {
+p, pre{
 	display: inline;
 	text-align: left;
 	font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
