@@ -24,3 +24,4 @@ if (isset($_POST['login']) && isset($_POST['passwd']) && isset($_POST['submit'])
 } else {
     echo "ERROR\n";
 }
+// hash('sha256', 
