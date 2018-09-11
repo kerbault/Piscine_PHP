@@ -7,8 +7,8 @@ function cmp($a, $b)
     $cb = strtolower($b);
     $i = 0;
     $comp = "abcdefghijklmnopqrstuvwxyz0123456789!\"#$%&'()*+,-./:;<=>?@[\]^_`{|}~";
-	while (($i < strlen($ca)) || ($i < strlen($cb))) {
-		$posa = ($ca[$i]) ? strpos($comp, $ca[$i]) : 0;
+    while (($i < strlen($ca)) || ($i < strlen($cb))) {
+        $posa = ($ca[$i]) ? strpos($comp, $ca[$i]) : 0;
         $posb = ($cb[$i]) ? strpos($comp, $cb[$i]) : 0;
         if ($posa < $posb) {
             return (-1);
@@ -26,10 +26,11 @@ if ($argc > 1) {
     $tmp = implode(" ", $argv);
     $tmp = trim($tmp);
     $i = -1;
+    $tmp = str_replace("\t", " ", $tmp);
     while ($i != 0) {
         $tmp = str_replace("  ", " ", $tmp, $i);
     }
-	$tab = explode(" ", $tmp);
+    $tab = explode(" ", $tmp);
     usort($tab, "cmp");
     foreach ($tab as $val) {
         echo ("$val\n");

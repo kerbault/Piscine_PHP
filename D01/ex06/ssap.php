@@ -3,6 +3,7 @@
 
 $argv[0] = null;
 $tmp = implode(" ", $argv);
+$tmp = str_replace("\t", " ", $tmp);
 $tmp = trim($tmp);
 $i = -1;
 while ($i != 0) {

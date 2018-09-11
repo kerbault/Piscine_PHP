@@ -6,14 +6,14 @@ if ($argc > 0) {
     while ($i != 0) {
         $argv[1] = str_replace("  ", " ", $argv[1], $i);
     }
-    $tab = explode(" ", $argv[1]);
-    $i = count($tab);
-    $tmp = $tab[$i - 1];
-    $tab[$i - 1] = $tab[0];
-    $tab[0] = $tmp;
-    $j = 0;
-    $bol = 0;
-    while ($i-- > 0) {
+	$argv[1] = trim($argv[1]);
+	$tab = explode(" ", $argv[1]);
+	$i = count($tab);
+	$tab[$i] = $tab[0];
+    $j = 1;
+	$bol = 0;
+	$i++;
+    while ($i-- > 1) {
         if ($bol == 1) {
             echo " ";
         }
