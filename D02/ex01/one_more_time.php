@@ -39,7 +39,7 @@ if ($argc == 2) {
         $data[4] = explode(":", $data[4]);
         $data[2] = tr_month($data[2]);
         date_default_timezone_set(UTC);
-        $ret = mktime($data[4][0],$data[4][1],$data[4][2],$data[2],$data[1],$data[3]);
+        $ret = mktime($data[4][0], $data[4][1], $data[4][2], $data[2], $data[1], $data[3], 1);
         echo ("$ret\n");
     } else {
         echo ("Wrong Format\n");
