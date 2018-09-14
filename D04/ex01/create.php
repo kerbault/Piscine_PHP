@@ -4,8 +4,8 @@ if (isset($_POST['login']) && isset($_POST['passwd']) && isset($_POST['submit'])
     if (!file_exists('../private')) {
         mkdir('../private');
     }
-    $tmp['login'] = htmlspecialchars($_POST['login']);
-    $tmp['passwd'] = hash("sha512", htmlspecialchars($_POST['passwd']));
+    $tmp['login'] = $_POST['login'];
+    $tmp['passwd'] = hash("sha512", $_POST['passwd']);
     if (file_exists('../private/passwd')) {
         $users = unserialize(file_get_contents("../private/passwd"));
         foreach ($users as $tmp2) {

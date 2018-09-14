@@ -1,1 +1,1 @@
-CREATE DATABASE "db_kerbault";
+CREATE DATABASE IF NOT EXISTS db_kerbault;
