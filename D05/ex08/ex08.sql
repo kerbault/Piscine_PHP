@@ -1,10 +1,10 @@
 SELECT
-    nom,
-    prenom,
-    DATE_FORMAT(date_naissance, "%Y-%m-%d") AS 'date de naissance'
+  `last_name`,
+  `first_name`,
+  DATE_FORMAT(`birthdate`, "%Y-%m-%d") AS 'date de naissance'
 FROM
-    fiche_personne
+  `user_card`
 WHERE
-    YEAR(date_naissance) LIKE '%1989%'
+  YEAR(`birthdate`) LIKE '1989'
 ORDER BY
-    nom ASC;
+  `last_name` ASC;
