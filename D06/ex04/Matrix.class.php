@@ -8,7 +8,7 @@ class Matrix
     const RZ = "Oz ROTATION";
     const TRANSLATION = "TRANSLATION";
     const PROJECTION = "PROJECTION";
-    protected $matrix = array();
+    public $matrix = array();
     private $_preset;
     private $_scale;
     private $_angle;
