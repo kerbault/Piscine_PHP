@@ -11,37 +11,43 @@ class Color
     public function __construct(array $color)
     {
         if (isset($color['red']) && isset($color['green']) && isset($color['blue'])) {
-            $this->red = intval($color['red']);
-            $this->green = intval($color['green']);
-            $this->blue = intval($color['blue']);
+            $this->red = self::limit(intval($color['red']));
+            $this->green = self::limit(intval($color['green']));
+            $this->blue = self::limit(intval($color['blue']));
         } elseif (isset($color['rgb'])) {
-            $this->red = intval($color['rgb']) / 65281 % 256;
-            $this->green = intval($color['rgb']) / 256 % 256;
-            $this->blue = intval($color['rgb']) % 256;
+            $this->red = self::limit(0xFF & intval($color['rgb']) >> 16);
+            $this->green = self::limit(0xFF & intval($color['rgb']) >> 8);
+            $this->blue = self::limit(0xFF & intval($color['rgb']));
         }
 
         if (self::$verbose) {
-            printf("Color( red: %3d, green: %3d, blue: %3d ) constructed.", $this->red, $this->green, $this->blue);
+            printf("Color( red: %3d, green: %3d, blue: %3d ) constructed.\n", $this->red, $this->green, $this->blue);
         }
     }
     public function __destruct()
     {
         if (self::$verbose) {
-            printf("Color( red: %3d, green: %3d, blue: %3d ) destructed.", $this->red, $this->green, $this->blue);
+            printf("Color( red: %3d, green: %3d, blue: %3d ) destructed.\n", $this->red, $this->green, $this->blue);
         }
     }
 
-    public function add()
+    public function add($add)
     {
-
+        return (new color(array('red' => self::limit($this->red + $add->red),
+            'green' => self::limit($this->green + $add->green),
+            'blue' => self::limit($this->blue + $add->blue))));
     }
-    public function sub()
+    public function sub($sub)
     {
-
+        return (new color(array('red' => self::limit($this->red - $sub->red),
+            'green' => self::limit($this->green - $sub->green),
+            'blue' => self::limit($this->blue - $sub->blue))));
     }
-    public function mult()
+    public function mult($mult)
     {
-
+        return (new color(array('red' => self::limit($this->red * $mult),
+            'green' => self::limit($this->green * $mult),
+            'blue' => self::limit($this->blue * $mult))));
     }
 
     public function __toString()
@@ -57,9 +63,14 @@ class Color
         }
         print(PHP_EOL);
     }
+    private static function limit($color)
+    {
+        if ($color > 255) {
+            return (255);
+        } elseif ($color < 0) {
+            return (0);
+        } else {
+            return ($color);
+        }
+    }
 }
-
-$instance = new Color();
-
-print($instance . PHP_EOL);
-$instance::doc();
