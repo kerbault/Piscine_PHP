@@ -1,0 +1,68 @@
+<html>
+
+<head>
+	<meta charset="UTF-8">
+	<title>It’s over 9000</title>
+	<style>
+
+	</style>
+</head>
+
+<body>
+	<div id="calc">
+		<input type="text" id="left"><br>
+		<select name="operator" id="op">
+			<option value='+' selected>+</option>
+			<option value='-'>-</option>
+			<option value='*'>*</option>
+			<option value='/'>/</option>
+			<option value='%'>%</option>
+		</select><br>
+		<input type="text" id="right"> <br>
+		<input type="submit" value="Try me!" id="submit" onclick="base()">
+	</div>
+	<script>
+		window.onload = function init() {
+			var calc = document.getElementById("calc");
+			var left = document.getElementById("left");
+			var right = document.getElementById("right");
+			var op = document.getElementById("op");
+
+			setInterval("alert('Please, use me...')", 30000)
+		}
+
+		function base() {
+
+			if (left.value != "" && right.value != "" && right.value.trim() && left.value.trim() && Number(left.value) >= 0 && Number(right.value) >= 0) {
+				var l_c = Number(left.value);
+				var r_c = Number(right.value);
+				var op_c = op.value;
+
+				if (op_c == '+') {
+					alert(l_c + r_c);
+				} else if (op_c == '-') {
+					alert(l_c - r_c);
+				} else if (op_c == '*') {
+					alert(l_c * r_c);
+				} else if (op_c == '/') {
+					if (r_c == 0) {
+						alert('It’s over 9000!')
+					} else {
+						alert(l_c / r_c);
+					}
+				} else if (op_c == '%') {
+					if (r_c == 0) {
+						alert('It’s over 9000!')
+					} else {
+						alert(l_c % r_c);
+					}
+				}
+			} else {
+				alert("Error :(");
+			}
+		}
+
+	</script>
+</body>
+
+</html>
