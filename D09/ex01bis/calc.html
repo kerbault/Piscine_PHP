@@ -3,6 +3,7 @@
 <head>
 	<meta charset="UTF-8">
 	<title>It’s over 9000</title>
+	<script src="https://code.jquery.com/jquery-3.3.1.js" integrity="sha256-2Kok7MbOyxpgUVvAk/HJ2jigOSYS2auK4Pfzbm7uH60=" crossorigin="anonymous"></script>
 </head>
 
 <body>
@@ -19,26 +20,26 @@
 		<input type="submit" value="Try me!" id="submit" onclick="base()">
 	</div>
 	<script>
-		window.onload = function init() {
-			var calc = document.getElementById("calc");
-			var left = document.getElementById("left");
-			var right = document.getElementById("right");
-			var op = document.getElementById("op");
+		$(document).ready(function () {
+			var calc = $("#calc");
+			var left = $("#left");
+			var right = $("#right");
+			var op = $("#op");
 
 			setInterval("alert('Please, use me...')", 30000)
-		}
+		})
 
 		function base() {
 
 			if (left.value != "" && right.value != "" && right.value.trim() && left.value.trim() && Number(left.value) >= 0 && Number(right.value) >= 0) {
-				var l_c = parseInt(Number(left.value));
-				var r_c = parseInt(Number(right.value));
-				var op_c = op.value;
-
+				var l_c = parseInt(Number(left.value), 10);
+				var r_c = parseInt(Number(right.value), 10);
 				if (l_c != Number(left.value) || r_c != Number(right.value)) {
 					alert("Error :(");
 					return;
 				}
+				var op_c = op.value;
+
 				if (op_c == '+') {
 					alert(l_c + r_c);
 					console.log(l_c + r_c);

@@ -1,0 +1,61 @@
+<html>
+
+<head>
+	<meta charset="UTF-8">
+	<title>balloon</title>
+	<style>
+		#balloon {
+			width: 200px;
+			height: 200px;
+			background-color: red;
+			border-radius: 50%;
+		}
+	</style>
+	<script src="https://code.jquery.com/jquery-3.3.1.js" integrity="sha256-2Kok7MbOyxpgUVvAk/HJ2jigOSYS2auK4Pfzbm7uH60=" crossorigin="anonymous"></script>
+</head>
+
+<body>
+	<div id="balloon" onclick="inflate()" onmouseout="deflate()">
+
+	</div>
+	<script type="text/javascript">
+		var v_balloon = $('#balloon');
+		var color = { 0: '#ff0000', 1: '#00ff00', 2: '#0000ff' }
+		var col_index = 0;
+		var size = 200;
+
+		function blow() {
+			v_balloon.css('height', size);
+			v_balloon.css('width', size);
+			v_balloon.css('backgroundColor', color[col_index]);
+		}
+
+		function inflate() {
+			if (size <= 410) {
+				size += 10;
+			} else
+				size = 200;
+
+			if (col_index < 2) {
+				col_index += 1;
+			} else
+				col_index = 0;
+
+			blow();
+		}
+
+		function deflate() {
+			if (size >= 205) {
+				size -= 5;
+			}
+			if (col_index > 0) {
+				col_index -= 1;
+			} else
+				col_index = 2;
+
+			blow();
+		}
+	</script>
+</body>
+
+</html>
